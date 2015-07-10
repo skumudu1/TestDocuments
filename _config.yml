@@ -1,0 +1,74 @@
+# The public documentation URL, used for sitemap.xml
+url: "http://documentation.townsuite.com"
+
+# Exclude files which should not be in the output
+exclude: [readme.md, Gemfile, Gemfile.lock,api_sort.rb, bootstrap.sh, vagrantfile]
+navigation:
+## List your directory names and order here, like this:
+    "releasenotes":
+        title: "Release Notes"
+        position: 1
+    "highlight":
+        title: "Feature High Lights"
+        position: 2
+    "financial":
+        title: "Financial Documentation"
+        position: 3
+    "mapping":
+        title: "Mapping Documentation"
+        position: 4
+    "planning":
+        title: "Planning Documentation"
+        position: 5
+    "webservices":
+        title: "Web Services Documentation"
+        position: 6	
+	"testservices":
+		title: "Test Services"
+		position: 7
+		
+## The application virtual path
+baseurl:
+
+## The Kendo UI version used
+cdnVersion: "2015.2.624"
+
+## Assign layout and category per different paths
+defaults:
+-
+    scope:
+        path: ""
+    values:
+        layout: "page"
+        category: "default"
+        product: "TownSuite"
+        editable: true
+
+
+type_links:
+    "Array": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+    "Boolean": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
+    "Function": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"
+    "jQuery": "http://api.jquery.com/Types/#jQuery"
+    "Promise": "http://api.jquery.com/Types/#Promise"
+    "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+    "Number": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+    "String": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+
+# Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
+# "foo": "Bar"
+
+# The google services configuration
+google_tag_manager:
+google_custom_search: ''
+
+# Assets pipeline configuration
+assets:
+    cachebust: soft
+
+## Do not edit below this line
+safe: false
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
